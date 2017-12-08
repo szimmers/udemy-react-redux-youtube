@@ -10,6 +10,12 @@ const SearchBar = () => {
 // class-based component. can introspect, hold state, communicate w/ other components.
 // render() required.
 class SearchBar extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {term: ''};
+	}
+
 	handleInputChange(event) {
 		console.log(event.target.value);
 	}
