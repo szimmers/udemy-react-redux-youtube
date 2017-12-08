@@ -22,7 +22,15 @@ class SearchBar extends Component {
 
 	render() {
 		//return <input onChange={this.handleInputChange} />;
-		return <input onChange={event => console.log(event.target.value)} />;
+		//return <input onChange={event => console.log(event.target.value)} />;
+
+		return (
+			<div>
+				<input onChange={event => this.setState({term: event.target.value})} />
+				<br />
+				value: {this.state.term}
+			</div>
+		);
 	}
 }
 
